@@ -19,6 +19,13 @@ $book = $stmt->fetch();
     <title><?=$book['title'];?></title>
 </head>
 <body>
+    
     <h1><?=$book['title'];?></h1>
+
+    <form action="delete.php" method="post">
+        <input type="hidden" name="book-id" value="<?=$id;?>">
+        <input type="submit" name="delete" value="Kustuta">
+    </form>
+
 </body>
 </html>
